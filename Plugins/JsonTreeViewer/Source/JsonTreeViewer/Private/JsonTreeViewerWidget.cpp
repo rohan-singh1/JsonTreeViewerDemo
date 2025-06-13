@@ -157,7 +157,8 @@ TSharedRef<ITableRow> UJsonTreeViewerWidget::GenerateRow(TSharedPtr<class FTreeI
                 .Padding(Padding)
                 .AutoWidth()
                 [
-                    SNew(STextBlock)
+                    SNew(SEditableText)
+                        .IsReadOnly(true)
                         .Visibility(Item->Value.IsEmpty() ? EVisibility::Collapsed : EVisibility::Visible)
                         .Text(FText::FromString(Item->Value))
                         .ColorAndOpacity(GetValueColorFromJsonType(Item->ValueType)) // Color based on value type
