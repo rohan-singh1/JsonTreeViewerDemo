@@ -1,0 +1,44 @@
+{
+  "@id": "post-123",
+  "@source": "blog-api",
+  "title": "Understanding JSON",
+  "views": 1024,
+  "rating": 4.75,
+  "published": true,
+  "author": {
+    "@username": "jdoe",
+    "name": "John Doe",
+    "profile": {
+      "bio": "Developer and writer",
+      "statistics": {
+        "posts": 58,
+        "followers": 2500,
+        "reputation": 4.8
+      }
+    }
+  },
+  "tags": ["json", "api", "tutorial"],
+  "stats": {
+    "shares": 30,
+    "bookmarks": 150,
+    "feedback": [5, 4, 5, null, 3]
+  },
+  "comments": [
+    {
+      "id": 1,
+      "user": "alice",
+      "comment": "Great article!",
+      "replies": [
+        {
+          "id": 11,
+          "user": "@admin",
+          "comment": null,
+          "metadata": {
+            "approved": false,
+            "timestamp": "2025-05-10T17:45:00Z"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "JSON Tree Viewer",
+	"Description": "Customizable slate widget exposed to Blueprints that visualizes a JSON file in a tree view",
+	"Category": "UI",
+	"CreatedBy": "Rohan Singh",
+	"CreatedByURL": "https://www.linkedin.com/in/rohan-sierra/",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"FabURL": "com.epicgames.launcher://ue/Fab/product/1dde9537-7c5f-43cd-8e4c-7abfbbd9126a",
+	"SupportURL": "https://www.linkedin.com/in/rohan-sierra/",
+	"EngineVersion": "5.5.0",
+	"CanContainContent": false,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "JsonTreeViewer",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}
