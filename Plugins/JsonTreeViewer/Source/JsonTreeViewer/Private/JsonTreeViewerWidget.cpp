@@ -110,7 +110,7 @@ void UJsonTreeViewerWidget::InitJsonTree(const FString JsonPathorString)
         else
         {
             _bValidJson = false;
-            UE_LOG(LogTemp, Error, TEXT("This string '%s' is neither a valid file path nor a valid JSON string! Aborting!"), *JsonPathorString);
+            UE_LOG(LogTemp, Warning, TEXT("This string '%s' is neither a valid file path nor a valid JSON string! Aborting!"), *JsonPathorString);
         }
     }
 
