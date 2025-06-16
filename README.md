@@ -1,7 +1,7 @@
 # JSON Tree Viewer
 
 **JSON Tree Viewer** is a lightweight and powerful Unreal Engine plugin that renders structured JSON data as an interactive, collapsible tree—perfect for in-editor tools or runtime data visualization. Feed it a raw JSON string or a file path, and the plugin will do the rest.
-
+![image](https://github.com/rohan-singh1/JsonTreeViewerDemo/blob/f57a643daeb7c99ce8ffdf2f1c144b9b55e0b52a/Resources/Thumbnail_128.png)
 ---
 
 ##  Features
@@ -101,5 +101,9 @@ Use the following Blueprint-callable function:
 ---
 
 ##  Screenshots
-
+![image](https://github.com/rohan-singh1/JsonTreeViewerDemo/blob/f57a643daeb7c99ce8ffdf2f1c144b9b55e0b52a/Resources/1.png)
+---
+![image](https://github.com/rohan-singh1/JsonTreeViewerDemo/blob/f57a643daeb7c99ce8ffdf2f1c144b9b55e0b52a/Resources/2.png)
+---
+![image](https://github.com/rohan-singh1/JsonTreeViewerDemo/blob/f57a643daeb7c99ce8ffdf2f1c144b9b55e0b52a/Resources/3.png)
 ---
