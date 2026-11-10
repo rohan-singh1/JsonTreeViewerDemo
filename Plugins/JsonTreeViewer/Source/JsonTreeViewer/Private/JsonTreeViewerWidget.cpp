@@ -30,6 +30,13 @@
 #include "Dom/JsonObject.h" 
 #include "Logging/LogMacros.h" 
 #include "Styling/CoreStyle.h"
+#include "Misc/FileHelper.h"
+#include "Misc/Paths.h"
+#include "Widgets/Layout/SBox.h"
+#include "Widgets/Layout/SScrollBox.h"
+#include "Widgets/SBoxPanel.h"
+#include "Widgets/Text/STextBlock.h"
+#include "Widgets/Input/SEditableText.h"
 
 UJsonTreeViewerWidget::UJsonTreeViewerWidget()
 {
@@ -127,7 +134,7 @@ void UJsonTreeViewerWidget::InitJsonTree(const FString JsonPathorString)
 TSharedRef<ITableRow> UJsonTreeViewerWidget::GenerateRow(TSharedPtr<class FTreeItem> Item, const TSharedRef<STableViewBase>& OwnerTable)
 {
     // Use default Slate texboxt font if no custom font is provided
-    const FSlateFontInfo DefaultFont(FPaths::EngineContentDir() / TEXT("Slate/Fonts/Roboto-Regular.ttf"), 9);
+    const FSlateFontInfo DefaultFont = FCoreStyle::GetDefaultFontStyle("Regular", 9);
 
     // Create the treeview row widget
     return SNew(STableRow<TSharedPtr<class FTreeItem>>, OwnerTable)
@@ -211,7 +218,7 @@ void UJsonTreeViewerWidget::BuildTree(TSharedPtr<FJsonValue>& JsonValue)
         for (auto& Pair : JsonValue->AsObject()->Values)
         {
             TSharedPtr<FTreeItem> Parsed = ParseNode(Pair.Value);
-            TSharedPtr<FTreeItem> Row = MakeShared<FTreeItem>(Pair.Key, Parsed->Value, Parsed->ValueType);
+            TSharedPtr<FTreeItem> Row = MakeShared<FTreeItem>(FString(*Pair.Key), Parsed->Value, Parsed->ValueType);
             if (Parsed->ChildItems.Num() > 0)
             {
                 Row->ChildItems = Parsed->ChildItems;
@@ -238,7 +245,7 @@ TSharedPtr<FTreeItem> UJsonTreeViewerWidget::ParseNode(const TSharedPtr<FJsonVal
         for (auto& Pair : JsonValue->AsObject()->Values)
         {
             TSharedPtr<FTreeItem> Parsed = ParseNode(Pair.Value);
-            TSharedPtr<FTreeItem> Child = MakeShared<FTreeItem>(Pair.Key, Parsed->Value, Parsed->ValueType);
+            TSharedPtr<FTreeItem> Child = MakeShared<FTreeItem>(FString(*Pair.Key), Parsed->Value, Parsed->ValueType);
             if (Parsed->ChildItems.Num() > 0)
             {
                 Child->ChildItems = Parsed->ChildItems;

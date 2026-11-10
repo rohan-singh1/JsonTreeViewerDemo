@@ -29,6 +29,10 @@
 
 #include "CoreMinimal.h"
 #include "Components/Widget.h"
+#include "Dom/JsonValue.h"
+#include "Fonts/SlateFontInfo.h"
+#include "Widgets/Views/STreeView.h"
+#include "Widgets/Views/STableRow.h"
 #include "JsonTreeViewerWidget.generated.h"
 
 /**
